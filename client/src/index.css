@@ -1,0 +1,533 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.particle:nth-child(2n + 1){
+  animation-name: animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+.particle:nth-child(2n + 2){
+  animation-name: animation-reverse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.particle:nth-child(2n + 3){
+  animation-name: animation-reverse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+.particle:nth-child(2n + 4){
+  animation-name: animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.particle:nth-child(2n + 5){
+  animation-name: animation-reverse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.particle:nth-child(2n + 6){
+  animation-name: animation-reverse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+@keyframes animation {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes animation-reverse {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}
+.cssbuttons-io-button {
+  background: #1e2964;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #1e2964;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  margin-bottom: 10px;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #1e2964;
+  right: 0.3em;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #1e2964;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+.link {
+  color: lightgray;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+.active {
+  color: white;
+}
+.link:hover{
+  color: white;
+}
+.main_div {
+  --color: #ee9896;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.main_div::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  top: 0px;
+  left: 0px;
+  z-index: -5;
+  border-top: 3px solid var(--color);
+  border-left: 3px solid var(--color);
+  transition: 0.5s;
+}
+
+.main_div::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  bottom: 0px;
+  right: 0px;
+  z-index: -5;
+  border-right: 3px solid var(--color);
+  border-bottom: 3px solid var(--color);
+  transition: 0.5s;
+}
+
+.main_div:hover::before {
+  width: 70%;
+  height: 70%;
+}
+
+.main_div:hover::after {
+  width: 70%;
+  height: 70%;
+}
+
+.main_div button {
+  padding: 0.7em 2em;
+  font-size: 16px;
+  background: transparent;
+  color: #ee9896;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.main_dif {
+  --color: #50C878;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.main_dif::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  top: 0px;
+  left: 0px;
+  z-index: -5;
+  border-top: 3px solid var(--color);
+  border-left: 3px solid var(--color);
+  transition: 0.5s;
+}
+
+.main_dif::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  bottom: -2px;
+  right: -2px;
+  z-index: -5;
+  border-right: 3px solid var(--color);
+  border-bottom: 3px solid var(--color);
+  transition: 0.5s;
+}
+
+.main_dif:hover::before {
+  width: 70%;
+  height: 70%;
+}
+
+.main_dif:hover::after {
+  width: 70%;
+  height: 70%;
+}
+
+.main_dif button {
+  padding: 0.7em 2em;
+  font-size: 16px;
+  background: transparent;
+  color: #50C878;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.card {
+  width: 190px;
+  height: 254px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+  background: #fff;
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  position: relative;
+  transition: all .4s;
+  margin: 20px;
+}
+
+.card::before {
+  content: attr(data-image);
+  letter-spacing: 0.2em;
+  position: absolute;
+  bottom: 8px;
+  left: 20px;
+  color: rgb(51, 51, 51);
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.card div {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+  cursor: pointer;
+  z-index: 10;
+  transition: all .4s;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.card:hover div {
+  transform: translateY(-30px);
+}
+.card div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/* From uiverse.io by @alexmaracinaru */
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 10px 16px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  margin-top: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 37px;
+  height: 37px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+/* From uiverse.io by @Jedi-hongbin */
+.back {
+  display: flex;
+  height: 3em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+  position: relative;
+  bottom: 5px;
+  left: 10px;
+}
+
+.back>svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+}
+
+.back:hover>svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+}
+
+.back:hover {
+  box-shadow: 4px 4px 9px #d1d1d1, -5px -5px 33px rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+}
+/* From uiverse.io by @Jedi-hongbin */
+.for {
+  display: flex;
+  height: 3em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+}
+.for>svg {
+  transform: rotate(180deg);
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+}
+
+.for:hover>svg {
+  font-size: 1.2em;
+  transform: translateX(5px), rotate(180deg);
+}
+
+.for:hover {
+  box-shadow: -4px 4px 9px #d1d1d1, 5px -5px 33px rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+}
+.phone {
+  outline: none;
+  padding: 2px 4px;
+}
+.dragover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+.previewSource p {
+  display: none;
+}
+.previewSource img {
+  object-fit: cover;
+  width: 100%;
+}
+.errorclose {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 830px){
+  .phone {
+    width: 150px;
+  }
+}
+/* From uiverse.io by @EmmaxPlay */
+.spinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+
+.spinner:before {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #0bec8b 0%, #31168a 100%);
+  animation: spin8932 .5s infinite linear;
+}
+
+.spinner:after {
+  width: 85%;
+  height: 85%;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.spinner3 {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.spinner3::before,
+.spinner3:after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+
+.spinner3:before {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #ee9896 0%, #1e2964 100%);
+  animation: spin8932 .5s infinite linear;
+}
+
+.spinner3:after {
+  width: 85%;
+  height: 85%;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.spinner2 {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.spinner2::before,
+.spinner2:after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+
+.spinner2:before {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #a1a5c3 0%, #1e2964 100%);
+  animation: spin8932 .5s infinite linear;
+}
+
+.spinner2:after {
+  width: 85%;
+  height: 85%;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes spin8932 {
+  to {
+    transform: rotate(360deg);
+  }
+}
